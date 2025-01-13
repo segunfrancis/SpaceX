@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.segunfrancis.spacex.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/toViewMoreFragment"
+            app:destination="@id/viewMoreFragment" />
+        <action
+            android:id="@+id/to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/viewMoreFragment"
+        android:name="com.segunfrancis.spacex.ui.view_more.ViewMoreFragment"
+        tools:layout="@layout/fragment_view_more">
+
+        <argument
+            android:name="articleLink"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="wikiLink"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="videoLink"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/filterFragment"
+        android:name="com.segunfrancis.spacex.ui.filter.FilterFragment"
+        tools:layout="@layout/fragment_filter" >
+        <argument
+            android:name="years"
+            app:argType="string[]" />
+    </dialog>
+</navigation>

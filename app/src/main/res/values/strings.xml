@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+    <string name="text_article">Article</string>
+    <string name="text_wikipedia">Wikipedia</string>
+    <string name="text_video">Video</string>
+    <string name="text_view_more">View More</string>
+    <string name="text_company_info">%1$s was founded by %2$s in %3$d. It has now %4$s employees, %5$d launch sites, and is valued at %6$s</string>
+    <string name="text_company">Company</string>
+    <string name="text_launches">Launches</string>
+    <string name="text_mission">Mission:</string>
+    <string name="text_date_time">Date/time:</string>
+    <string name="text_rocket">Rocket:</string>
+    <string name="text_days_now">Days %s now:</string>
+    <string name="desc_mission_patch_image">Mission patch image</string>
+    <string name="desc_launch_status">Icon indicating launch status</string>
+    <string name="text_date_at_time">%1$s at %2$s</string>
+    <string name="text_since">since</string>
+    <string name="text_from">from</string>
+    <string name="text_no_content">No Content</string>
+    <string name="title_filter">Filter</string>
+    <string name="text_filter_launches">Filter Launches</string>
+    <string name="text_successful">Successful</string>
+    <string name="text_by_launch_state">By Launch State</string>
+    <string name="text_unsuccessful">Unsuccessful</string>
+    <string name="text_order_by">Order By</string>
+    <string name="text_ascending">Ascending</string>
+    <string name="text_descending">Descending</string>
+    <string name="text_by_years">By Years</string>
+    <string name="text_clear_filters">Clear Filters</string>
+</resources>

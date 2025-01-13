@@ -1,0 +1,246 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "324f5fa056ee205d6c19fbb11921fb03",
+    "entities": [
+      {
+        "tableName": "companyInfoTable",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ceo` TEXT NOT NULL, `coo` TEXT NOT NULL, `cto` TEXT NOT NULL, `ctoPropulsion` TEXT NOT NULL, `employees` INTEGER NOT NULL, `founded` INTEGER NOT NULL, `founder` TEXT NOT NULL, `launchSites` INTEGER NOT NULL, `name` TEXT NOT NULL, `summary` TEXT NOT NULL, `testSites` INTEGER NOT NULL, `valuation` INTEGER NOT NULL, `vehicles` INTEGER NOT NULL, PRIMARY KEY(`name`))",
+        "fields": [
+          {
+            "fieldPath": "ceo",
+            "columnName": "ceo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coo",
+            "columnName": "coo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cto",
+            "columnName": "cto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ctoPropulsion",
+            "columnName": "ctoPropulsion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "employees",
+            "columnName": "employees",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "founded",
+            "columnName": "founded",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "founder",
+            "columnName": "founder",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "launchSites",
+            "columnName": "launchSites",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "summary",
+            "columnName": "summary",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "testSites",
+            "columnName": "testSites",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valuation",
+            "columnName": "valuation",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicles",
+            "columnName": "vehicles",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "name"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "launchesTable",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`details` TEXT, `flightNumber` INTEGER NOT NULL, `isTentative` INTEGER NOT NULL, `launchDateLocal` TEXT NOT NULL, `launchDateUnix` INTEGER NOT NULL, `launchDateUtc` TEXT NOT NULL, `launchSuccess` INTEGER, `launchWindow` INTEGER, `launchYear` TEXT NOT NULL, `missionName` TEXT NOT NULL, `tbd` INTEGER NOT NULL, `upcoming` INTEGER NOT NULL, `articleLink` TEXT, `missionPatch` TEXT, `missionPatchSmall` TEXT, `wikipedia` TEXT, `videoLink` TEXT, `youtubeId` TEXT, `rocketId` TEXT NOT NULL, `rocketName` TEXT NOT NULL, `rocketType` TEXT NOT NULL, PRIMARY KEY(`launchDateUnix`))",
+        "fields": [
+          {
+            "fieldPath": "details",
+            "columnName": "details",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flightNumber",
+            "columnName": "flightNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isTentative",
+            "columnName": "isTentative",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "launchDateLocal",
+            "columnName": "launchDateLocal",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "launchDateUnix",
+            "columnName": "launchDateUnix",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "launchDateUtc",
+            "columnName": "launchDateUtc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "launchSuccess",
+            "columnName": "launchSuccess",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "launchWindow",
+            "columnName": "launchWindow",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "launchYear",
+            "columnName": "launchYear",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "missionName",
+            "columnName": "missionName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tbd",
+            "columnName": "tbd",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "upcoming",
+            "columnName": "upcoming",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "links.articleLink",
+            "columnName": "articleLink",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.missionPatch",
+            "columnName": "missionPatch",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.missionPatchSmall",
+            "columnName": "missionPatchSmall",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.wikipedia",
+            "columnName": "wikipedia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.videoLink",
+            "columnName": "videoLink",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.youtubeId",
+            "columnName": "youtubeId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rocket.rocketId",
+            "columnName": "rocketId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rocket.rocketName",
+            "columnName": "rocketName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rocket.rocketType",
+            "columnName": "rocketType",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "launchDateUnix"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '324f5fa056ee205d6c19fbb11921fb03')"
+    ]
+  }
+}
